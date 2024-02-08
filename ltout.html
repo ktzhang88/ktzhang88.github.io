@@ -1,6 +1,16 @@
+<style>
+        .slds-visual-picker_vertical .slds-visual-picker__figure {
+            height: inherit !important;
+        }
+
+        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+            display: inline-flex !important;
+        }
+</style>
+
 <head></head>
 <body>
-<script src="https://lifestylecommunities--scheddev.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+<script src="https://lifestylecommunities--scheddev.sandbox.my.site.com/reservationbooking/lightning/lightning.out.js"></script>
 <script>
         var communityName = "";
         let inputVariables = [{ name : "communityName",
@@ -17,7 +27,7 @@
                         cmp.startFlow('Scheduled_Flow_Appointment_Booking',inputVariables);
                     }
                 );
-            }, 'https://lifestylecommunities--scheddev.sandbox.my.salesforce-sites.com/BookAppointment'  // Community endpoint
+            }, '	https://lifestylecommunities--scheddev.sandbox.my.site.com/reservationbooking'  // Community endpoint
         );
 </script>
 
