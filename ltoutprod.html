@@ -1,0 +1,30 @@
+<head>
+        
+</head>
+<body>
+<script src="https://lifestylecommunities.my.site.com/reservationbooking/lightning/lightning.out.js"></script>
+<script>
+        var communityName = "";
+        let inputVariables = [{ name : "communityName",
+                             type : "String",
+                             value : communityName}];
+        $Lightning.use("c:AppointmentBookingApp",    // name of the Lightning app
+            function() {                  
+                $Lightning.createComponent(
+                   "lightning:flow", // top-level component of your app
+                    { },                  // attributes to set on the component when created
+                    "lightningLocator",   // the DOM location to insert the component
+                    function(cmp) {
+                        //console.log('Hi from callback');// callback when component is created and active on the page
+                        cmp.startFlow('Scheduled_Flow_Appointment_Booking',inputVariables);
+                    }
+                );
+            },        'https://lifestylecommunities.my.site.com/reservationbooking'  // Community endpoint
+        );
+</script>
+
+ 
+
+    <div id="lightningLocator">
+</div>
+</body>
